@@ -10,13 +10,18 @@ List = React.createClass({
         return { posts: [] };
     },
     componentDidMount: function () {
-        setInterval(this.fetchLatestAlbums, 1000);
+        this.fetchLatestAlbums();
     },
-    fetchLatestAlbums: function () {
+    componentWillReceiveProps: function(nextProps) {
+      this.fetchLatestAlbums(nextProps);
+    },
+    fetchLatestAlbums: function (nextProps) {
+        nextProps = nextProps || {};
+
         $.ajax({
             url:       'https://api.spotify.com/v1/search',
             data:      {
-              q: this.props.query,
+              q: nextProps.query,
               type: 'album'
             },
             success: function (result) {
