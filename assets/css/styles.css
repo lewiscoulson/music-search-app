@@ -1,0 +1,39 @@
+body {
+  background: #f7f7f7;
+  margin: 0;
+  padding: 0; }
+
+.container {
+  width: 92%;
+  max-width: 720px;
+  positon: relative;
+  margin: 30px auto; }
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+input {
+  width: 700px;
+  height: 60px;
+  background: #f7f7f7;
+  border: 1px solid #999;
+  font-size: 40px;
+  padding: 10px;
+  color: #ccc;
+}
+
+.album {
+  width: 25%;
+  height: 300px;
+  float: left;
+}
+
+.album__inner {
+  padding: 5px;
+}
+
+.album__inner img {
+  max-width: 100%;
+}

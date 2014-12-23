@@ -1,0 +1,15 @@
+/* Set Defaults for Body*/
+body {
+  line-height: 1.5;
+  font-size: 100%;
+  font-family: Proxima Nova, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  color: #424242; }
+
+h2 {
+  font-size: 0.8rem;
+  height: 50px;
+}
