@@ -16,7 +16,7 @@ List = React.createClass({
       this.fetchLatestAlbums(nextProps);
     },
     fetchLatestAlbums: function (nextProps) {
-        nextProps = nextProps || {};
+        nextProps = nextProps || {query: this.props.query};
 
         $.ajax({
             url:       'https://api.spotify.com/v1/search',
@@ -28,7 +28,7 @@ List = React.createClass({
                 this.setState({ posts: result.albums.items });
             }.bind(this),
             error: function (e) {
-                alert('error getting posts. please try again later');
+                console.log('error getting posts. please try again later');
             }
         });
     },

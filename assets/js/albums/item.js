@@ -9,6 +9,7 @@ Item = React.createClass({
           <div className="album__inner">
             <h2>{album.name}</h2>
             <img src={album.images[0].url} alt="" />
+            <span>Available in {album.available_markets.length} markets</span>
           </div>
        </li>;
     }
